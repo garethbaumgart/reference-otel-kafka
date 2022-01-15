@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  consumeconsole:
+    image: ${DOCKER_REGISTRY-}consumeconsole
+    build:
+      context: .
+      dockerfile: ConsumeConsole/Dockerfile
+  
+  producewebapi:
+    image: ${DOCKER_REGISTRY-}producewebapi
+    build:
+      context: .
+      dockerfile: ProduceWebApi/Dockerfile
